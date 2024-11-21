@@ -1,0 +1,28 @@
+services:
+  aula:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: aula
+    container_name: present
+    networks:
+      - aula
+    ports:
+      - "8000:8000"
+    environment:
+      - AULA=${AULA:-content.md}
+  
+  print:
+    image: astefanutti/decktape
+    container_name: print
+    networks:
+      - aula
+    volumes:
+      - ".:/prints"
+    environment:
+      - AULA=${AULA:-content.md}
+    command: automatic http://aula:8000 /prints/${AULA}.pdf
+
+networks:
+  aula:
+    name: aula

@@ -1,0 +1,17 @@
+{
+  "name": "presentation",
+  "scripts": {
+    "start": "gulp serve",
+    "present": "docker compose up -d --build aula",
+    "print": "docker compose up -d aula && docker compose run --rm print"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "gulp": "^5.0.0",
+    "gulp-connect": "^5.7.0",
+    "reveal.js": "^5.0.4",
+    "reveal.js-mermaid-plugin": "^2.3.0"
+  }
+}

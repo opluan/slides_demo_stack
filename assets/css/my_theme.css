@@ -1,0 +1,41 @@
+.reveal section .mermaid {
+    line-height: 1.0;
+    background-color: #fcf3d9;
+}
+
+.reveal pre, .reveal code {
+    background-color: #00313d;
+}
+
+:root {
+    --r-selection-background-color: #1a6091;
+}
+
+.row {
+    display: flex;
+}
+  
+.column_left {
+    flex: 80%;
+    padding: 1% 10% 0 5%;
+    text-align: left;
+}
+
+.column_right {
+    flex: 20%;
+    text-align: right;
+}
+
+#left {
+	margin: 10px 0 15px 20px;
+	text-align: left;
+	float: left;
+    position: absolute;
+    top: 55%;
+}
+
+#right {
+	margin: 10px 0 15px 0;
+	float: right;
+	text-align: left;
+}
